@@ -17,11 +17,6 @@ MonoBehaviour:
   - Hello mask boy.
   - In combat you can heal your Talimentals with a potion from your inventory.
   - 'The first time you use an attack there won''t be any elemental damage bonus. '
-  - You can push the Shift or Tab buttons to open the Party or Inventory menu respectively.
-    Also press E to interact with objects and continue battle
-  - No thank you
   playerDialogue:
   - Have any tips for battles.
   - What about the combat tips?
-  - Anything else?
-  - Thanks
