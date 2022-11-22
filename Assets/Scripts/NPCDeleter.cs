@@ -7,8 +7,6 @@ public class NPCDeleter : MonoBehaviour
 {
     public GameObject[] despawn;
     public GameObject[] spawn;
-    public Image spawnCover;
-    public Image despawnCover;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
