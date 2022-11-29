@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209bbc49d3d37e641b45815ed15ea5ed, type: 3}
   m_Name: Stabby
   m_EditorClassIdentifier: 
-  name: 
+  name: Stabby
   dialogue:
   - Hello?
   - Thank Heavens!! A normal child.
-  - Dammiit all!!!!
+  - In the first round of combat your attacks won't have any elemental damage bonus.
   playerDialogue:
   - Hi there Mister.
-  - In the first round of combat your attacks won't have any elemental damage bonus.
+  - Know anything about talimental battles.
+
