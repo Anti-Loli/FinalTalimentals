@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209bbc49d3d37e641b45815ed15ea5ed, type: 3}
   m_Name: Bobothy
   m_EditorClassIdentifier: 
-  name: 
+  name: Bobothy
   dialogue:
-  - Now you must be a normal child right?
-  - '*sigh* Sure, why not.'
+  - You having any luck with these beating these lunapillar?
+  - You must have a Talimental with a light based attack. Sure are lucky then I know
+    i didn't get that.
+  - You are not the first to ask me that question, but you might be the first one
+    I slap for asking.
   playerDialogue:
-  - BAAAAAHHH!!
+  - Yeah there not that hard to beat.
+  - Are you a boy or are you a girl?

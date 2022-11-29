@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209bbc49d3d37e641b45815ed15ea5ed, type: 3}
   m_Name: Auld Sadgai 3
   m_EditorClassIdentifier: 
-  name: 
+  name: Auld Sadgai
   dialogue:
-  - Ah battling. I remember my younger days battlling. Back then we didn't even use
-    Talimentals.
-  - Yeah still not sure how that worked, but you haven't lived till you've punched
-    a rough wind in the face.
-  - This coming from the frog.
+  - You did it young trainer you survived the lunapillar cave alive!
+  - Yes. This mighty cave is but a fraction of the challenge you will experience
+    out in the real world.
+  - Worry not. For now the only challenge that remains between you and you're graduation
+    is a ranger battle in the practice field outside the main gate.
+  - Don't worry about what I am and go to the main gate to continue your final test.
   playerDialogue:
-  - 'Wait you fought Talimentals personally? '
-  - Yeah you're definitely senile.
-  - '*Sigh*'
+  - You're telling me people have died in there!
+  - Please tell me thiis test is almost over.
+  - You're senile aren't you?
