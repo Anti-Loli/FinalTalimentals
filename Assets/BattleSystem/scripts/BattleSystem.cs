@@ -85,11 +85,11 @@ public class BattleSystem : MonoBehaviour
 			}
 			else if (state == BattleState.WON)
 			{
-				SceneManager.LoadScene("Hunters Dev Room");
+				SceneManager.LoadScene("Cave");
 			}
 			else if (state == BattleState.LOST)
 			{
-				SceneManager.LoadScene("Hunters Dev Room");
+				SceneManager.LoadScene("Cave");
 			}
 
 		}

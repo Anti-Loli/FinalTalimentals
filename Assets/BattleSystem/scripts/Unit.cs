@@ -24,6 +24,7 @@ public class Unit : MonoBehaviour
 	public bool TakeDamage(Unit enemy)
 	{
 		int dmg = (((((2 * enemy.unitLevel) /5) + 2 * enemy.attack /defence)/ 50) + 2);
+		Debug.Log(dmg);
 
 		if (enemy.currentMove.Equals(enemy.moves[0]))
 		{
