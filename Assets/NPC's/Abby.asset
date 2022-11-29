@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 209bbc49d3d37e641b45815ed15ea5ed, type: 3}
-  m_Name: Stabby
+  m_Name: Abby
   m_EditorClassIdentifier: 
-  name: Stabby
+  name: 
   dialogue:
-  - Hello?
-  - Thank Heavens!! A normal child.
-  - In the first round of combat your attacks won't have any elemental damage bonus.
+  - Well hello little girl.
+  - Doesn't stop you from being little.
   playerDialogue:
-  - Hi there Mister.
-  - Know anything about talimental battles.
-
+  - Dude you're barely older than me.
+  - I bet you get bullied for your height.

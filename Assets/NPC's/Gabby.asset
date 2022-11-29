@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209bbc49d3d37e641b45815ed15ea5ed, type: 3}
   m_Name: Gabby
   m_EditorClassIdentifier: 
+
   name: Gabby
   dialogue:
   - Hello mask boy.
