@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209bbc49d3d37e641b45815ed15ea5ed, type: 3}
   m_Name: Auld Sadgai
   m_EditorClassIdentifier: 
-  name: 
+  name: Auld Sadgai
   dialogue:
+  - Hello there my Talimental Ranger in training.
   - Use Arrow keys or WASD to walk around.
   - You can push the Shift or Tab buttons to open the Party or Inventory menu respectively.
   playerDialogue:
-  - Sorry I don't have any change. Wait what?
-  - What do any of those words mean?
+  - Hello professor.
+  - What?
+  - 

@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209bbc49d3d37e641b45815ed15ea5ed, type: 3}
   m_Name: Auld Sadgai 2
   m_EditorClassIdentifier: 
-  name: 
+  name: Auld Sadgai
   dialogue:
-  - Are you a frog?
-  - Sorry that was a strange thing to ask.
+  - I see you have begun the final test my young ranger.
+  - Oh the door to escape this pocket dimension is on the other side of the cave.
+  - Defeat or sneak pass all of the wild talimentals in this cave to pass phase one
+    of the test.
+  - It won't.
   playerDialogue:
-  - What?
+  - Where'd the door go!
+  - So what do I have to do?
+  - This'll be easy.
