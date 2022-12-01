@@ -30,7 +30,7 @@ public class Door : MonoBehaviour
                 {
                     SceneManager.LoadScene("Credits");
                 }
-                else if (currentScene.name == "Cave")
+                else if (currentScene.name == "Cave 1")
                 {
                     SceneManager.LoadScene("OutsideSchool");
                 }
