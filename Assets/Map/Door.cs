@@ -24,11 +24,7 @@ public class Door : MonoBehaviour
             {
                 if (currentScene.name == "InsideSchool")
                 {
-                    SceneManager.LoadScene("Cave");
-                }
-                else if (currentScene.name == "OutsideSchool")
-                {
-                    SceneManager.LoadScene("Credits");
+                    SceneManager.LoadScene("Cave 1");
                 }
                 else if (currentScene.name == "Cave 1")
                 {

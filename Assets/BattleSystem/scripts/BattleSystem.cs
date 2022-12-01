@@ -38,6 +38,8 @@ public class BattleSystem : MonoBehaviour
 	public GameObject charge;
 	public GameObject lunapillarAttack;
 
+	public AudioSource buttonSound;
+
 	private bool playerPlayed;//boolean used to avoid enemy killing player if the spam E
 
 	private void Awake()
@@ -49,6 +51,7 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
 	{
+		
 		playerPlayed = false;
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
@@ -58,20 +61,7 @@ public class BattleSystem : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.E))
 		{
-			if(state == BattleState.PLAYERTURN)
-            {
-				if(playerUnit.speed < enemyUnit.speed)
-                {
-					PlayerTurn();
-                }
-                else if(playerPlayed)
-                {
-					playerPlayed = false;
-					state = BattleState.ENEMYTURN;
-					StartCoroutine(EnemyTurn());
-				}
-            }
-			else if(state == BattleState.ENEMYTURN)
+			 if(state == BattleState.ENEMYTURN)
             {
 				if (playerUnit.speed < enemyUnit.speed)
 				{
@@ -85,11 +75,11 @@ public class BattleSystem : MonoBehaviour
 			}
 			else if (state == BattleState.WON)
 			{
-				SceneManager.LoadScene("Cave");
+				SceneManager.LoadScene("Cave 1");
 			}
 			else if (state == BattleState.LOST)
 			{
-				SceneManager.LoadScene("Cave");
+				SceneManager.LoadScene("Cave 1");
 			}
 
 		}
@@ -131,6 +121,16 @@ public class BattleSystem : MonoBehaviour
 		{
 			state = BattleState.WON;
 			EndBattle();
+		}
+		else if (playerUnit.speed < enemyUnit.speed)
+		{
+			PlayerTurn();
+		}
+		else if (playerPlayed)
+		{
+			playerPlayed = false;
+			state = BattleState.ENEMYTURN;
+			StartCoroutine(EnemyTurn());
 		}
 	}
 
@@ -191,9 +191,8 @@ public class BattleSystem : MonoBehaviour
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
-
+		buttonSound.Play();
 		attackMenu.SetActive(false);
-
 		//compares the speeds of the player and enemy and decides which one goes first 
 		if (playerUnit.speed > enemyUnit.speed)
         {
@@ -209,6 +208,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
+		buttonSound.Play();
 		attackMenu.SetActive(false);
 		StartCoroutine(PlayerHeal());
 	}

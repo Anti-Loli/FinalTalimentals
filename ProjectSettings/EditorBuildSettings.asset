@@ -14,7 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OutsideSchool.unity
     guid: 0a1227d71fc7398408df1d45352ce02a
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Cave.unity
-    guid: be8bd57a1f5d3a74a92b6859979d9ab1
+    path: Assets/Scenes/Cave 1.unity
+    guid: d3d170cb2885c184896d0771c870d490
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 32b1feebf7993424abc745ae845db734
   m_configObjects: {}
