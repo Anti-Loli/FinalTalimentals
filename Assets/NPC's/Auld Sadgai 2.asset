@@ -16,12 +16,16 @@ MonoBehaviour:
   dialogue:
   - I see you have begun the final test my young ranger.
   - Oh the door to escape this pocket dimension is on the other side of the cave.
-  - Sneak pass all of the wild talimentals in this cave to pass phase one of the
-    test. If you encounter it you must defeat it in battle, and start from the beginning.
-  - It won't.
+  - 'Sneak pass all of the wild talimentals in this cave to pass phase one of the
+    test. '
+  - This trail is to test you abilites to avoid uneeded battles, if you battle you
+    must restart.
+  - In case battle cannot be avoided, and that Gusto isn't you partner. So he won't
+    appear in your party menu.
   - It won't.
   playerDialogue:
   - Where'd the door go!
   - So what do I have to do?
-  - Why is this so complicated?
+  - Why do I have to sneak?
+  - Why do I have a talimental now?
   - This'll be easy.
