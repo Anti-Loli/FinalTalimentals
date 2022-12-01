@@ -17,7 +17,9 @@ MonoBehaviour:
   - Hello there my Talimental Ranger in training.
   - Use Arrow keys or WASD to walk around.
   - You can push the Shift or Tab buttons to open the Party or Inventory menu respectively.
+  - Don't forget to go through the front door to begin taking you final exam. Or
+    walk around and talk to people
   playerDialogue:
   - Hello professor.
   - What?
-  - 
+  - Okay... Good day Professor Sadgai

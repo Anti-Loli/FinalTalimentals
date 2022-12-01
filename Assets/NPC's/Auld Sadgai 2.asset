@@ -16,10 +16,12 @@ MonoBehaviour:
   dialogue:
   - I see you have begun the final test my young ranger.
   - Oh the door to escape this pocket dimension is on the other side of the cave.
-  - Defeat or sneak pass all of the wild talimentals in this cave to pass phase one
-    of the test.
+  - Sneak pass all of the wild talimentals in this cave to pass phase one of the
+    test. If you encounter it you must defeat it in battle, and start from the beginning.
+  - It won't.
   - It won't.
   playerDialogue:
   - Where'd the door go!
   - So what do I have to do?
+  - Why is this so complicated?
   - This'll be easy.
