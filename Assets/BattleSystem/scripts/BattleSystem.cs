@@ -22,6 +22,7 @@ public class BattleSystem : MonoBehaviour
 
 	public Text dialogueText;//text in the top of the screen
 
+	//The HUDs for both enemy and player that includes health bars and attack buttons
 	public BattleHUD1 playerHUD;
 	public BattleHUD1 enemyHUD;
 
@@ -38,7 +39,13 @@ public class BattleSystem : MonoBehaviour
 	public GameObject charge;
 	public GameObject lunapillarAttack;
 
-	public AudioSource buttonSound;
+	//sounds used for the attack and potion buttons
+	public AudioSource attackOneSound;
+	public AudioSource attackTwoSound;
+	public AudioSource potionSound;
+
+	//sound for the enemy attack
+	public AudioSource enemyAttackSound;
 
 	private bool playerPlayed;//boolean used to avoid enemy killing player if the spam E
 
@@ -51,7 +58,6 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
 	{
-		
 		playerPlayed = false;
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
@@ -61,19 +67,7 @@ public class BattleSystem : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.E))
 		{
-			 if(state == BattleState.ENEMYTURN)
-            {
-				if (playerUnit.speed < enemyUnit.speed)
-				{
-					StartCoroutine(PlayerAttack());
-				}
-				else
-				{
-					state = BattleState.PLAYERTURN;
-					PlayerTurn();
-				}
-			}
-			else if (state == BattleState.WON)
+			 if (state == BattleState.WON)
 			{
 				SceneManager.LoadScene("Cave 1");
 			}
@@ -138,6 +132,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		dialogueText.text = enemyUnit.unitName + " attacks!";
 		lunapillarAttack.SetActive(true);
+		enemyAttackSound.Play();
 
 		yield return new WaitForSeconds(1f);
 
@@ -146,24 +141,34 @@ public class BattleSystem : MonoBehaviour
 
 		yield return new WaitForSeconds(1f);
 
+		lunapillarAttack.SetActive(false);
+
 		if (isDead)
 		{
 			state = BattleState.LOST;
 			EndBattle();
 		}
-
-		lunapillarAttack.SetActive(false);
+		else if (playerUnit.speed < enemyUnit.speed)
+		{
+			StartCoroutine(PlayerAttack());
+		}
+		else
+		{
+			state = BattleState.PLAYERTURN;
+			PlayerTurn();
+		}
+		
 	}
 
 	void EndBattle()
 	{
 		if (state == BattleState.WON)
 		{
-			dialogueText.text = "You won the battle!";
+			dialogueText.text = "You won the battle! Press E to end battle.";
 		}
 		else if (state == BattleState.LOST)
 		{
-			dialogueText.text = "You were defeated.";
+			dialogueText.text = "You were defeated. Press E to end battle.";
 		}
 	}
 
@@ -191,7 +196,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
-		buttonSound.Play();
+
 		attackMenu.SetActive(false);
 		//compares the speeds of the player and enemy and decides which one goes first 
 		if (playerUnit.speed > enemyUnit.speed)
@@ -208,15 +213,18 @@ public class BattleSystem : MonoBehaviour
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
-		buttonSound.Play();
+
 		attackMenu.SetActive(false);
+		potionSound.Play();
 		StartCoroutine(PlayerHeal());
 	}
 
+	//these last two methods spawn the art for the players attacks
 	private void AttackOneClicked()
     {
 		playerUnit.currentMove = attackOne.GetComponentInChildren<Text>().text;
 		charge.SetActive(true);
+		attackOneSound.Play();
 		Debug.Log(playerUnit.currentMove);
 	}
 
@@ -224,6 +232,7 @@ public class BattleSystem : MonoBehaviour
     {
 		playerUnit.currentMove = attackTwo.GetComponentInChildren<Text>().text;
 		tornadoPunch.SetActive(true);
+		attackTwoSound.Play();
 		Debug.Log(playerUnit.currentMove);
 	}
 }

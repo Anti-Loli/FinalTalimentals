@@ -15,11 +15,11 @@ MonoBehaviour:
   name: Gabby
   dialogue:
   - Hey mask boy.
-  - Not bad not bad. Aside fron the final test that's stressing me out to the point
+  - Not bad not bad. Aside from the final test that's stressing me out to the point
     of zero sleep I'm good.
   - Oh you bet. I need something to calm my nerves after all this stress.
   - Later mask boy.
   playerDialogue:
-  - Hey gabby how's it hanging?
+  - Hey Gabby how's it hanging?
   - Still up for dreskal after the final?
   - See ya later.
